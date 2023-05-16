@@ -11,7 +11,8 @@ import Auth from './component/Auth';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+        
+     
        <Routes>
        <Route
 					path="/"
@@ -21,10 +22,10 @@ function App() {
 						</Auth>
 					}
 				/>
-
+ <Route path="/:userId" element={<ChatbotPage/>} />
 <Route path="/signup"  element={<SignUp/>} />
 <Route path="/signin"  element={<SignIn/>} />
-      <Route path="/:userId" element={<ChatbotPage/>} />
+   
   
      </Routes>
     </div>

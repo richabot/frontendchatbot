@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import Navbar from './Navbar';
 
 const SignUp = () => {
     const [name, setName] = useState('');
@@ -20,6 +21,8 @@ const SignUp = () => {
       }
     };
   return (
+   <>
+    <Navbar/>
     <section className="vh-100" style={{backgroundColor:" #eee"}}>
     <div className="container h-100">
       <div className="row d-flex justify-content-center align-items-center h-100">
@@ -93,7 +96,7 @@ const SignUp = () => {
         </div>
       </div>
     </div>
-  </section>
+  </section></>
   )
 }
 

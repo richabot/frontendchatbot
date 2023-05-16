@@ -8,6 +8,10 @@ import { useParams } from 'react-router-dom'
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from 'styled-components';
 import {Segment} from "semantic-ui-react"
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import Navbar from './Navbar';
 // import messageicon from "../messageicon.png"
 const CustomizationPage = () => {
   const [headerColor, setHeaderColor] = useState("#DCA3DC");
@@ -25,6 +29,7 @@ const CustomizationPage = () => {
   
   const userId=userIdfull?.split("@")[0];
   // handleUserInput
+  const code = `<script src="https://frontendchatbot.vercel.app/${userId}"></script>`;
   useEffect(() => {
     const fetchCustomization = async () => {
       try {
@@ -209,8 +214,16 @@ const CustomizationPage = () => {
   
   return (
 
- <div className="container">
-  
+<>
+<Navbar/>
+<div className="container">
+  <SyntaxHighlighter language="html" style={solarizedlight}>
+
+{`<script src="https://frontendchatbot.vercel.app/${userId}"></script>`}
+</SyntaxHighlighter>
+<CopyToClipboard text={code}>
+ <button className='btnposition'>Copy</button>
+</CopyToClipboard>
   <div className="row">
     <div className="col-md-6 border1">
     
@@ -349,6 +362,7 @@ const CustomizationPage = () => {
   </div>
  
 </div>
+</>
    
 
 

@@ -161,13 +161,7 @@ const [startmessage,setStartMessage]=useState("Hello Welcome")
   return (
     <div>
 
-<SyntaxHighlighter language="html" style={solarizedlight}>
 
-       {`<script src="https://frontendchatbot.vercel.app/${userId}"></script>`}
-      </SyntaxHighlighter>
-      <CopyToClipboard text={code}>
-        <button className='btnposition'>Copy</button>
-      </CopyToClipboard>
      <div>
   { !chatVisible &&<img
    style={{ position: "fixed", bottom: "20px", right: "20px" ,cursor: "pointer"}}
