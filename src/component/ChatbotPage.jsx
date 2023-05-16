@@ -163,7 +163,7 @@ const [startmessage,setStartMessage]=useState("Hello Welcome")
 
 <SyntaxHighlighter language="html" style={solarizedlight}>
 
-       {`<script src="http://chatbot1122/${userId}"></script>`}
+       {`<script src="https://frontendchatbot.vercel.app/${userId}"></script>`}
       </SyntaxHighlighter>
       <CopyToClipboard text={code}>
         <button className='btnposition'>Copy</button>

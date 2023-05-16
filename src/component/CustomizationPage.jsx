@@ -106,7 +106,7 @@ const CustomizationPage = () => {
 
       id: "Greet",
 
-      message: "how are you doing  ",
+      message: "how are can we assist ? ",
 
       trigger: "Done",
 
